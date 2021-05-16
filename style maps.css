@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 1800px;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    justify-content: space-between;
+}
+
+header {
+    width: 90%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+    background-color: rgb(25, 25, 25);
+}
+
+#Logo {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 5px;
+    overflow: hidden;
+}
+
+#Logo>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#Menu {
+    width: 40%;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+#Menu>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fcda00;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.odk:hover {
+    text-decoration: underline;
+}
+
+footer {
+    width: 90%;
+    background-color: rgb(25, 25, 25);
+    color: whitesmoke;
+    height: 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+footer>div {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+main {
+    color: whitesmoke;
+    width: 90%;
+    height: 88%;
+    background-color: rgb(25, 25, 25);
+    overflow: hidden;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#maps {
+    height: 97%;
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px
+}
+
+#maps>a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    background-position: top;
+    text-decoration: none;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    background-position: top;
+    text-decoration: none;
+    background-position: center;
+}
+
+.mapinfo {
+    height: 100%;
+    width: 100%;
+    color: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 30px;
+    opacity: 0;
+    color: white;
+    transition: 250ms opacity ease-in, 250ms background-color ease-in;
+}
+
+.mapinfo:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 1;
+}
+
+.mapinfo:hover>h2 {
+    text-decoration: underline solid lightgray;
+}
+
+#popup {
+    position: fixed;
+    display: none;
+    flex-direction: row;
+    height: 80vh;
+    width: 80vw;
+    left: 100%;
+    top: 80px;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: +1;
+    background-color: rgb(17, 17, 17);
+}
+
+#left {
+    padding-left: 10px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#left>h2 {
+    font-size: 30px;
+    margin: 50px;
+}
+
+#left>p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#story {
+    margin-top: 50px;
+}
+
+#right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#right>div {
+    height: 90%;
+    width: 90%;
+    background-image: url("./Maps/Bank.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+}
+
+.fa-times-circle {
+    font-size: 20px;
+    margin-top: 2%;
+    text-align: right;
+    align-self: flex-start;
+}
+
+#left>div {
+    height: 80%;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    font-size: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.map:nth-child(1) {
+    background-image: url("./Maps/Bank.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(2) {
+    background-image: url("./Maps/border.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(3) {
+    background-image: url("./Maps/Chalet.png");
+    background-size: cover;
+}
+
+.map:nth-child(4) {
+    background-image: url("./Maps/club.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(5) {
+    background-image: url("./Maps/pobrezi.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(6) {
+    background-image: url("./Maps/cunsulat.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(7) {
+    background-image: url("./Maps/Fortress1.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(8) {
+    background-image: url("./Maps/favela.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(9) {
+    background-image: url("./Maps/Hereford_217063.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(10) {
+    background-image: url("./Maps/house.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(11) {
+    background-image: url("./Maps/Cafe.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(12) {
+    background-image: url("./Maps/kanal.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(13) {
+    background-image: url("./Maps/oregon.png");
+    background-size: cover;
+}
+
+.map:nth-child(14) {
+    background-image: url("./Maps/Outback2.png");
+    background-size: cover;
+}
+
+.map:nth-child(15) {
+    background-image: url("./Maps/Plane.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(16) {
+    background-image: url("./Maps/Sky.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(17) {
+    background-image: url("./Maps/Park.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(18) {
+    background-image: url("./Maps/Tover.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(19) {
+    background-image: url("./Maps/Villa.jpg");
+    background-size: cover;
+}
+
+.map:nth-child(20) {
+    background-image: url("./Maps/yacht.jpg");
+    background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+    body>* {
+        width: 100vw;
+    }
+    #story {
+        margin-top: 15px;
+    }
+    #left>p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    body>* {
+        width: 100vw;
+    }
+    #Logo {
+        width: 20%;
+    }
+    #Menu {
+        width: 80%;
+    }
+    #Menu>a {
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    footer>div>p {
+        font-size: 10px;
+    }
+    #popup {
+        height: 70vh;
+        width: 70vw;
+        left: 0px;
+        justify-content: center;
+    }
+    #left {
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+    }
+    #left>h2 {
+        font-size: 25px;
+        padding: 20px;
+        margin: 0px;
+    }
+    #left>p {
+        padding-top: 5px;
+        font-size: 12px;
+    }
+    #right {
+        width: 15%;
+    }
+    #right>div {
+        display: none;
+    }
+    #maps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

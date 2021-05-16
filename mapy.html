@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://api.cajthaml.eu/uploads/reset_595b8cd7ad.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style maps.css">
+    <title>Mapy</title>
+</head>
+
+<body>
+    <header>
+        <div id="Logo">
+            <img src="https://i.pinimg.com/originals/8c/c4/92/8cc492be438c76b99371d691d23cff8f.jpg" alt="">
+        </div>
+        <div id="Menu">
+            <a class="odk" href="./Herman.html">Menu</a>
+            <a class="odk" href="./Operátoři.html">Operátoři</a>
+            <a class="odk" href="./mapy.html">Mapy</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="popup">
+            <div id="left">
+                <h2>Bank</h2>
+                <p>Místo: LOS ANGELES, KALIFORNIE </p>
+                <p>Vydáno: Základní hra (prosinec 2015)</p>
+                <p>Herní mody: New Comer, Ranked, Quick Match</p>
+                <p id="story">Back story: Tým Rainbow byl povolán k nájezdu do velké banky. Důraz je kladen na poskytnutí pocitu pokroku útočníkům, kteří procházejí postupně opevněnými oblastmi budovy.</p>
+
+            </div>
+
+            <div id="right">
+
+                <div></div>
+                <i class="far fa-times-circle"></i>
+
+
+            </div>
+        </div>
+        <div id="maps">
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Bank</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Border</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Chalet</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Club house</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Coastline</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Consulate</h2>
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Fortress</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Favela</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Hereford base</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>House</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Kafe Dostoyevsky</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Kanal</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Oregon</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Outback</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Presidential Plane</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Skyscraper</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Theme Park</h2>
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Tower</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Villa</h2>
+
+                </div>
+            </a>
+            <a class="map">
+                <div class="mapinfo">
+                    <h2>Yacht</h2>
+
+                </div>
+            </a>
+
+        </div>
+
+
+    </main>
+    <footer>
+        <div>
+            <p>Rainbow Six Siege partří Ubisoftu takže to nefunguje :D</p>
+            <p>Petr Herman 2021</p>
+        </div>
+    </footer>
+</body>
+<script>
+    let box = document.getElementById("popup");
+    let back = document.getElementById("maps");
+    for (i = 0; i < 20; i++) {
+        document.getElementsByClassName("map")[i].addEventListener("click", function() {
+            document.getElementById("popup").style.display = "flex";
+
+
+            let animation = box.animate([{
+                left: "100%",
+
+            }, {
+                left: "10%"
+
+            }], {
+                duration: 1000,
+                easing: "ease-in",
+            });
+            box.style.left = "10%";
+
+            let anim = back.animate([{
+                filter: "brightness(100%)"
+
+            }, {
+                filter: "brightness(20%)"
+
+            }], {
+                duration: 1000,
+                easing: "ease-in",
+            });
+            box.style.left = "10%";
+
+            document.getElementById("maps").style.filter = "brightness(20%)";
+
+        })
+
+    }
+    document.getElementsByClassName("fa-times-circle")[0].addEventListener("click", function() {
+
+
+        let animation = box.animate([{
+            left: "10%",
+
+
+        }, {
+            left: "100%",
+
+
+        }], {
+            duration: 1000,
+            easing: "ease-in",
+        });
+        box.style.left = "100%";
+
+        let anim = back.animate([{
+            filter: "brightness(20%)"
+
+        }, {
+            filter: "brightness(100%)"
+
+        }], {
+            duration: 1000,
+            easing: "ease-in",
+        });
+        document.getElementById("maps").style.filter = "brightness(100%)";
+
+    })
+</script>
+
+</html>
